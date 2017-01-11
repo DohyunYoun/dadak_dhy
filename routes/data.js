@@ -1,4 +1,4 @@
-var mysql = require('promise-mysql');
+/*var mysql = require('promise-mysql');
 
 var db_port = process.env.DB_PORT;
 var db_user = process.env.DB_USER;
@@ -40,3 +40,4 @@ exports.getDataFromDatabase = function(str) {
         });
 };
 
+*/

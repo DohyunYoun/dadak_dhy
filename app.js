@@ -15,9 +15,9 @@ var app = express();
 var server = http.createServer(app);
 
 //3.ser server port numver;
-app.set('port', process.env.PORT || '505');
+app.set('port', '8000');
 // view engine setup
- app.set('view engine', 'jade');
+app.set('view engine', 'jade');
 
 app.set('views', path.join(__dirname, 'views'));
 
@@ -30,6 +30,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 app.route('/diet/test').get(diet.test);
+app.route('/').get(function(req, res) {
+    res.write('hello');
+    res.end();
+});
 
 //5.this is run server
 server.listen(app.get('port'), function() {
@@ -70,4 +74,3 @@ app.use(function(err, req, res, next) {
 
 
 module.exports = app;
-
